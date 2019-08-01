@@ -1,1 +1,3 @@
-// tests go here; this will not be compiled when this package is used as a library
+basic.forever(function () {
+    BM11_led.blink_led(BM11_led.LED.GREEN, 1000)
+})
