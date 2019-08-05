@@ -32,7 +32,7 @@ namespace BM11_led {
     //% blockId="show_color_on_led" block="Turn On %led| with intensity level %intensity| %state=1"
     //% weight=30 blockGap=8
     //%intensity.min=1 intensity.max=10
-    export function Show_Color_On_LED(led: LED, intensity: number, state: STATE) {
+    export function show_color_on_led(led: LED, intensity: number, state: STATE) {
         
         if (led == LED.RED) {
             pins.analogWritePin(AnalogPin.P2, pins.map(255 / intensity, 0, 1023, 0, 255))
