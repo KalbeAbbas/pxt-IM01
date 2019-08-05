@@ -29,13 +29,13 @@ namespace BM11_led {
         BLACK = 8,
     }
 
-    //% blockId="show_color_on_led" block="Turn On %led| with intensity level %intensity| %state=1"
+    //% blockId="show_color_on_led" block="Turn On %led| LED with intensity level %intensity %state|"
     //% weight=30 blockGap=8
-    //%intensity.min=1 intensity.max=10
+    //% intensity.min=1 intensity.max=10
     export function show_color_on_led(led: LED, intensity: number, state: STATE) {
 
         if (led == LED.RED) {
-            if(state == STATE.TRUE){
+            if (state == STATE.TRUE) {
                 pins.analogWritePin(AnalogPin.P2, pins.map(255 / intensity, 0, 1023, 0, 255))
                 pins.analogWritePin(AnalogPin.P8, pins.map(0, 0, 1023, 0, 255))
                 pins.analogWritePin(AnalogPin.P16, pins.map(0, 0, 1023, 0, 255))
@@ -43,7 +43,7 @@ namespace BM11_led {
         }
 
         if (led == LED.GREEN) {
-            if(state == STATE.TRUE){
+            if (state == STATE.TRUE) {
                 pins.analogWritePin(AnalogPin.P2, pins.map(0, 0, 1023, 0, 255))
                 pins.analogWritePin(AnalogPin.P8, pins.map(255 / intensity, 0, 1023, 0, 255))
                 pins.analogWritePin(AnalogPin.P16, pins.map(0, 0, 1023, 0, 255))
@@ -51,8 +51,7 @@ namespace BM11_led {
         }
 
         if (led == LED.BLUE) {
-            if(state == STATE.TRUE)
-            {
+            if (state == STATE.TRUE) {
                 pins.analogWritePin(AnalogPin.P2, pins.map(0, 0, 1023, 0, 255))
                 pins.analogWritePin(AnalogPin.P8, pins.map(0, 0, 1023, 0, 255))
                 pins.analogWritePin(AnalogPin.P16, pins.map(255 / intensity, 0, 1023, 0, 255))
@@ -60,7 +59,7 @@ namespace BM11_led {
         }
 
         if (led == LED.YELLOW) {
-            if(state == STATE.TRUE){
+            if (state == STATE.TRUE) {
                 pins.analogWritePin(AnalogPin.P2, pins.map(255 / intensity, 0, 1023, 0, 255))
                 pins.analogWritePin(AnalogPin.P8, pins.map(255 / intensity, 0, 1023, 0, 255))
                 pins.analogWritePin(AnalogPin.P16, pins.map(0, 0, 1023, 0, 255))
@@ -68,8 +67,7 @@ namespace BM11_led {
         }
 
         if (led == LED.PINK) {
-            if(state == STATE.TRUE)
-            {
+            if (state == STATE.TRUE) {
                 pins.analogWritePin(AnalogPin.P2, pins.map(255 / intensity, 0, 1023, 0, 255))
                 pins.analogWritePin(AnalogPin.P8, pins.map(192 / intensity, 0, 1023, 0, 255))
                 pins.analogWritePin(AnalogPin.P16, pins.map(203 / intensity, 0, 1023, 0, 255))
@@ -77,8 +75,7 @@ namespace BM11_led {
         }
 
         if (led == LED.PURPLE) {
-            if(state == STATE.TRUE)
-            {
+            if (state == STATE.TRUE) {
                 pins.analogWritePin(AnalogPin.P2, pins.map(238 / intensity, 0, 1023, 0, 255))
                 pins.analogWritePin(AnalogPin.P8, pins.map(130 / intensity, 0, 1023, 0, 255))
                 pins.analogWritePin(AnalogPin.P16, pins.map(238 / intensity, 0, 1023, 0, 255))
@@ -86,8 +83,7 @@ namespace BM11_led {
         }
 
         if (led == LED.BROWN) {
-            if(state == STATE.TRUE)
-            {
+            if (state == STATE.TRUE) {
                 pins.analogWritePin(AnalogPin.P2, pins.map(165 / intensity, 0, 1023, 0, 255))
                 pins.analogWritePin(AnalogPin.P8, pins.map(42 / intensity, 0, 1023, 0, 255))
                 pins.analogWritePin(AnalogPin.P16, pins.map(42 / intensity, 0, 1023, 0, 255))
@@ -95,8 +91,7 @@ namespace BM11_led {
         }
 
         if (led == LED.WHITE) {
-            if(state == STATE.TRUE)
-            {
+            if (state == STATE.TRUE) {
                 pins.analogWritePin(AnalogPin.P2, pins.map(255 / intensity, 0, 1023, 0, 255))
                 pins.analogWritePin(AnalogPin.P8, pins.map(255 / intensity, 0, 1023, 0, 255))
                 pins.analogWritePin(AnalogPin.P16, pins.map(255 / intensity, 0, 1023, 0, 255))
