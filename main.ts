@@ -2,15 +2,38 @@
 namespace BM11_led {
 
     export enum LED {
+        //% block="RED"
+        RED = 0,
         //% block="GREEN"
-        GREEN = 0,
+        GREEN = 1,
         //% block="BLUE"
-        BLUE = 1,
+        BLUE = 2,
+        //% block="WHITE"
+        WHITE = 3,
+        //% block="YELLOW"
+        YELLOW = 4,
+        //% block="PINK"
+        PINK = 5,
+        //% block="PURPLE"
+        PURPLE = 6,
+        //% block="BROWN"
+        BROWN = 7,
+        //% block="BLACK"
+        BLACK = 8,
+
     }
 
     //% blockId="blink_led" block="Blink LED %led| with period of %interval| ms"
     //% weight=30 blockGap=8
     export function blink_led(led: LED, interval: number) {
+
+        if (led == LED.RED) {
+            pins.digitalWritePin(DigitalPin.P2, 1)
+            basic.pause(interval)
+            pins.digitalWritePin(DigitalPin.P2, 0)
+            basic.pause(interval)
+        }
+
         if (led == LED.GREEN) {
             pins.digitalWritePin(DigitalPin.P8, 1)
             basic.pause(interval)
@@ -19,9 +42,20 @@ namespace BM11_led {
         }
 
         if (led == LED.BLUE) {
+            pins.digitalWritePin(DigitalPin.P16, 1)
+            basic.pause(interval)
+            pins.digitalWritePin(DigitalPin.P16, 0)
+            basic.pause(interval)
+        }
+
+        if (led == LED.WHITE) {
             pins.digitalWritePin(DigitalPin.P2, 1)
+            pins.digitalWritePin(DigitalPin.P8, 1)
+            pins.digitalWritePin(DigitalPin.P16, 1)
             basic.pause(interval)
             pins.digitalWritePin(DigitalPin.P2, 0)
+            pins.digitalWritePin(DigitalPin.P8, 0)
+            pins.digitalWritePin(DigitalPin.P16, 0)
             basic.pause(interval)
         }
     }
