@@ -48,6 +48,57 @@ namespace BM11_led {
             basic.pause(interval)
         }
 
+        if (led == LED.YELLOW) {
+            pins.digitalWritePin(DigitalPin.P2, 1)
+            pins.digitalWritePin(DigitalPin.P8, 1)
+            basic.pause(interval)
+            pins.digitalWritePin(DigitalPin.P2, 0)
+            pins.digitalWritePin(DigitalPin.P8, 0)
+            basic.pause(interval)
+        }
+
+        if (led == LED.YELLOW) {
+            pins.digitalWritePin(DigitalPin.P2, 1)
+            pins.digitalWritePin(DigitalPin.P8, 1)
+            basic.pause(interval)
+            pins.digitalWritePin(DigitalPin.P2, 0)
+            pins.digitalWritePin(DigitalPin.P8, 0)
+            basic.pause(interval)
+        }
+
+        if (led == LED.PINK) {
+            pins.analogWritePin(AnalogPin.P2, pins.map(255, 0, 1023, 0, 255))
+            pins.analogWritePin(AnalogPin.P8, pins.map(192, 0, 1023, 0, 255))
+            pins.analogWritePin(AnalogPin.P16, pins.map(203, 0, 1023, 0, 255))
+            basic.pause(interval)
+            pins.analogWritePin(AnalogPin.P2, pins.map(0, 0, 1023, 0, 255))
+            pins.analogWritePin(AnalogPin.P8, pins.map(0, 0, 1023, 0, 255))
+            pins.analogWritePin(AnalogPin.P16, pins.map(0, 0, 1023, 0, 255))
+            basic.pause(interval)
+        }
+
+        if (led == LED.PURPLE) {
+            pins.analogWritePin(AnalogPin.P2, pins.map(238, 0, 1023, 0, 255))
+            pins.analogWritePin(AnalogPin.P8, pins.map(130, 0, 1023, 0, 255))
+            pins.analogWritePin(AnalogPin.P16, pins.map(238, 0, 1023, 0, 255))
+            basic.pause(interval)
+            pins.analogWritePin(AnalogPin.P2, pins.map(0, 0, 1023, 0, 255))
+            pins.analogWritePin(AnalogPin.P8, pins.map(0, 0, 1023, 0, 255))
+            pins.analogWritePin(AnalogPin.P16, pins.map(0, 0, 1023, 0, 255))
+            basic.pause(interval)
+        }
+
+        if (led == LED.BROWN) {
+            pins.analogWritePin(AnalogPin.P2, pins.map(165, 0, 1023, 0, 255))
+            pins.analogWritePin(AnalogPin.P8, pins.map(42, 0, 1023, 0, 255))
+            pins.analogWritePin(AnalogPin.P16, pins.map(42, 0, 1023, 0, 255))
+            basic.pause(interval)
+            pins.analogWritePin(AnalogPin.P2, pins.map(0, 0, 1023, 0, 255))
+            pins.analogWritePin(AnalogPin.P8, pins.map(0, 0, 1023, 0, 255))
+            pins.analogWritePin(AnalogPin.P16, pins.map(0, 0, 1023, 0, 255))
+            basic.pause(interval)
+        }
+
         if (led == LED.WHITE) {
             pins.digitalWritePin(DigitalPin.P2, 1)
             pins.digitalWritePin(DigitalPin.P8, 1)
