@@ -20,12 +20,11 @@ namespace BM11_led {
         BROWN = 7,
         //% block="BLACK"
         BLACK = 8,
-
     }
 
-    //% blockId="blink_led" block="Blink LED %led| with period of %interval| ms"
+    //% blockId="blink_led" block="Blink LED %led| with period of %interval| ms and intensity %intensity"
     //% weight=30 blockGap=8
-    export function blink_led(led: LED, interval: number) {
+    export function blink_led(led: LED, intensity:number, interval: number) {
 
         if (led == LED.RED) {
             pins.digitalWritePin(DigitalPin.P2, 1)
