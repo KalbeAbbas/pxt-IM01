@@ -22,7 +22,7 @@ namespace BM11_led {
         BLACK = 8,
     }
 
-    //% blockId="blink_led" block="Blink LED %led| with period of %interval| ms and intensity %intensity level"
+    //% blockId="blink_led" block="Blink LED %led| with period of %interval| ms and intensity level %intensity_level"
     //% weight=30 blockGap=8
     //%intensity.min=1 intensity.max=10
     export function blink_led(led: LED, interval: number, intensity: number) {
