@@ -31,7 +31,7 @@ namespace BM11_led {
 
     //% blockId="show_color_on_led" block="Turn On %led| LED with intensity level %intensity %state|"
     //% weight=30 blockGap=8
-    //% intensity.min=1 intensity.max=10
+    //% intensity.min=1 intensity.max=10 intensity.defl=1
     export function show_color_on_led(led: LED, intensity: number, state: STATE) {
 
         if (led == LED.RED) {
