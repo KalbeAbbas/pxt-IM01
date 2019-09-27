@@ -19,7 +19,7 @@ namespace IM01_led {
 
     //% blockId="show_color_on_led" block="Turn On %led| LED with intensity level %intensity %state|"
     //% weight=30 blockGap=8
-    //% intensity.min=0 intensity.max=10 intensity.defl=0
+    //% intensity.min=0 intensity.max=10 intensity.defl=10
     export function show_color_on_led(led: LED, intensity: number, state: STATE) {
 
         if (led == LED.GREEN) {
@@ -63,7 +63,7 @@ namespace IM01_led {
 
     //% blockId="blink_led" block="Blink LED %led| with period of %interval| ms and intensity level %intensity"
     //% weight=30 blockGap=8
-    //%intensity.min=0 intensity.max=10 intensity.defl=0
+    //%intensity.min=0 intensity.max=10 intensity.defl=10
     export function blink_led(led: LED, interval: number, intensity: number) {
 
         if (led == LED.GREEN) {
@@ -124,8 +124,8 @@ namespace IM01_led {
 
     //% blockId="show_bg_color_on_led" block="Turn On LED with G %g_value and B %b_value %state"
     //% weight=30 blockGap=8
-    //%g_value.min=0 g_value.max=10 g_value.defl=0
-    //%b_value.min=0 b_value.max=10 b_value.defl=0
+    //%g_value.min=0 g_value.max=10 g_value.defl=10
+    //%b_value.min=0 b_value.max=10 b_value.defl=10
     export function show_bg_color_on_led(g_value: number, b_value: number, state: STATE) {
         if(state)
         {
@@ -151,8 +151,8 @@ namespace IM01_led {
 
     //% blockId="blink_led_non_preset" block="Blink LED with period of %interval| ms with G %g_value and B %b_value values "
     //% weight=30 blockGap=8
-    //%g_value.min=0 g_value.max=10 g_value.defl=0
-    //%b_value.min=0 b_value.max=10 b_value.defl=0
+    //%g_value.min=0 g_value.max=10 g_value.defl=10
+    //%b_value.min=0 b_value.max=10 b_value.defl=10
     export function blink_led_non_preset(interval: number, g_value: number, b_value: number) {
 
         if(g_value == 10)
