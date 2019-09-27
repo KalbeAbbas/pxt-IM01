@@ -129,21 +129,23 @@ namespace IM01_led {
     export function show_bg_color_on_led(g_value: number, b_value: number, state: STATE) {
         if(state)
         {
-        if (g_value == 10) {
+            if (g_value == 10) {
             pins.digitalWritePin(DigitalPin.P8, 1)
-        } else {
-            pins.analogWritePin(AnalogPin.P8, (1023 * g_value) / 9)
-        }
+            } else {
+                pins.analogWritePin(AnalogPin.P8, (1023 * g_value) / 9)
+            }
 
-        if (b_value == 10) {
-            pins.digitalWritePin(DigitalPin.P2, 1)
-        } else {
-            pins.analogWritePin(AnalogPin.P2, (1023 * b_value) / 9)
-        }
-        }
-        else{
+            if (b_value == 10) {
+                pins.digitalWritePin(DigitalPin.P2, 1)
+            } else {
+                pins.analogWritePin(AnalogPin.P2, (1023 * b_value) / 9)
+            }
+
+        }else{
+
             pins.digitalWritePin(DigitalPin.P2, 0)
             pins.digitalWritePin(DigitalPin.P8, 0)
+            
         }
     }
 
