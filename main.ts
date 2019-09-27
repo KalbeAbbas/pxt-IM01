@@ -24,12 +24,11 @@ namespace IM01_led {
 
         if (led == LED.GREEN) {
             if (state == STATE.TRUE) {
-                if(intensity == 10)
-                {
+                if (intensity == 10) {
                     pins.digitalWritePin(DigitalPin.P8, 1)
                     pins.digitalWritePin(DigitalPin.P2, 0)
-                }else{
-                    pins.analogWritePin(AnalogPin.P8, (1023 * intensity)/9 )
+                } else {
+                    pins.analogWritePin(AnalogPin.P8, (1023 * intensity) / 9)
                     pins.digitalWritePin(DigitalPin.P2, 0)
                 }
             }
@@ -37,8 +36,7 @@ namespace IM01_led {
 
         if (led == LED.BLUE) {
             if (state == STATE.TRUE) {
-                if(intensity == 10)
-                {
+                if (intensity == 10) {
                     pins.digitalWritePin(DigitalPin.P8, 0)
                     pins.digitalWritePin(DigitalPin.P2, 1)
                 } else {
@@ -50,15 +48,14 @@ namespace IM01_led {
 
         if (led == LED.CYAN) {
             if (state == STATE.TRUE) {
-                if(intensity == 10)
-                {
+                if (intensity == 10) {
                     pins.digitalWritePin(DigitalPin.P8, 1)
                     pins.digitalWritePin(DigitalPin.P2, 1)
                 } else {
                     pins.analogWritePin(AnalogPin.P2, (1023 * intensity) / 9)
                     pins.analogWritePin(AnalogPin.P8, (1023 * intensity) / 9)
                 }
-                
+
             }
         }
 
