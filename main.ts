@@ -102,5 +102,23 @@ namespace IM01_led {
             basic.pause(interval)
         }
 
+        if (led == LED.CYAN) {
+
+            if (intensity == 10) {
+                pins.digitalWritePin(DigitalPin.P8, 1)
+                pins.digitalWritePin(DigitalPin.P2, 1)
+            } else {
+                pins.analogWritePin(AnalogPin.P2, (1023 * intensity) / 9)
+                pins.analogWritePin(AnalogPin.P8, (1023 * intensity) / 9)
+            }
+
+            basic.pause(interval)
+
+            pins.digitalWritePin(DigitalPin.P8, 0)
+            pins.digitalWritePin(DigitalPin.P2, 0)
+
+            basic.pause(interval)
+        }
+
     }
 }
