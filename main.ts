@@ -127,6 +127,8 @@ namespace IM01_led {
     //%g_value.min=0 g_value.max=10 g_value.defl=0
     //%b_value.min=0 b_value.max=10 b_value.defl=0
     export function show_bg_color_on_led(g_value: number, b_value: number, state: STATE) {
+        if(state)
+        {
         if (g_value == 10) {
             pins.digitalWritePin(DigitalPin.P8, 1)
         } else {
@@ -137,6 +139,11 @@ namespace IM01_led {
             pins.digitalWritePin(DigitalPin.P2, 1)
         } else {
             pins.analogWritePin(AnalogPin.P2, (1023 * b_value) / 9)
+        }
+        }
+        else{
+            pins.digitalWritePin(DigitalPin.P2, 0)
+            pins.digitalWritePin(DigitalPin.P8, 0)
         }
     }
 
